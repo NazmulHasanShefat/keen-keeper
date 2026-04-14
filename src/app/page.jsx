@@ -3,8 +3,6 @@ import Hero from "@/components/HomePage/Hero/Hero";
 
 
 export default async function Home(){
-  const mydata = await fetch(" http://localhost:3000/freands-data.json").then(res => res.json());
-
   return(
     <>
     <Hero />

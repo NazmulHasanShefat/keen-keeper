@@ -3,7 +3,7 @@ import MyLink from "./MyLink";
 
 const Navigation = () => {
   return (
-    <nav className="navbar bg-base-100 shadow-sm px-5">
+    <nav className="navbar flex items-center bg-base-100 shadow-sm px-5">
       <div className="flex-1">
         <a className="btn btn-ghost text-xl px-0 hover:bg-white border-transparent">KeenKeeper</a>
       </div>
