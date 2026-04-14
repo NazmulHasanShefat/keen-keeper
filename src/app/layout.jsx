@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navigation from "@/components/Header/Navigation";
 import Providers from "./lib";
+ import { ToastContainer } from 'react-toastify';
 
 export const metadata = {
   title: "Create Next App",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <Providers>
         <Navigation />
+         <ToastContainer />
         {children}
         </Providers>
       </body>

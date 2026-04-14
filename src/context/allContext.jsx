@@ -4,10 +4,9 @@ import { createContext, useState } from "react";
 export const FriendsContext = createContext();
 
 export default function FriendContextProvider({ children }){
-    const [friendsConnectionStatus, setFriendsConnectionStatus] = useState();
+    const [friendsConnectionStatus, setFriendsConnectionStatus] = useState([]);
     
     const data = {
-     
         friendsConnectionStatus,
         setFriendsConnectionStatus,
     }
