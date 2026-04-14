@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "alina",
+    "picture": "https://ibb.co.com/Q47J1Ck",
+    "email": "alina@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": [
+      "college",
+      "close friend"
+    ],
+    "bio": "Became friends during university days. Often go on weekend trips together.",
+    "goal": 7,
+    "next_due_date": "2025-08-10"
+  },
+  {
+    "id": 2,
+    "name": "Arif Hossain",
+    "picture": "https://ibb.co.com/XfnyjMRF",
+    "email": "arifhasan@yahoo.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": [
+      "workplace",
+      "mentor"
+    ],
+    "bio": "My senior at the office who guided me through my early career. Very supportive.",
+    "goal": 14,
+    "next_due_date": "2025-07-25"
+  },
+  {
+    "id": 3,
+    "name": "wanda",
+    "picture": "https://ibb.co.com/23MpR0Vr",
+    "email": "wanda@outlook.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": [
+      "school",
+      "childhood buddy"
+    ],
+    "bio": "Known each other since class 5. Always there for each other no matter what.",
+    "goal": 10,
+    "next_due_date": "2025-08-05"
+  },
+  {
+    "id": 4,
+    "name": "Sumaiya Akter",
+    "picture": "https://ibb.co.com/dJ32zSZT",
+    "email": "sumaiya.akter@gmail.com",
+    "days_since_contact": 30,
+    "status": "overdue",
+    "tags": [
+      "family",
+      "cousin"
+    ],
+    "bio": "My closest cousin from my mother's side. We grew up in the same neighborhood.",
+    "goal": 21,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 5,
+    "name": "Rakibul Islam",
+    "picture": "https://ibb.co.com/RGDV4TsY",
+    "email": "rakibul.islam@protonmail.com",
+    "days_since_contact": 8,
+    "status": "on-track",
+    "tags": [
+      "university",
+      "study group"
+    ],
+    "bio": "We studied computer science together and often collaborated on projects.",
+    "goal": 14,
+    "next_due_date": "2025-08-12"
+  },
+  {
+    "id": 6,
+    "name": "Fatema Begum",
+    "picture": "https://ibb.co.com/nst1NW6w",
+    "email": "fatema.begum@hotmail.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": [
+      "neighbor",
+      "old friend"
+    ],
+    "bio": "We lived next door for over ten years. She moved away but we still keep in touch.",
+    "goal": 30,
+    "next_due_date": "2025-07-15"
+  },
+  {
+    "id": 7,
+    "name": "Mehedi Hassan",
+    "picture": "https://ibb.co.com/B20KksjC",
+    "email": "mehedi.hassan@gmail.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": [
+      "gym",
+      "fitness buddy"
+    ],
+    "bio": "We met at the local gym and have been workout partners for the past year.",
+    "goal": 7,
+    "next_due_date": "2025-08-15"
+  },
+  {
+    "id": 8,
+    "name": "Riya Chowdhury",
+    "picture": "https://ibb.co.com/TxPqS8g4",
+    "email": "riya.chowdhury@gmail.com",
+    "days_since_contact": 15,
+    "status": "almost due",
+    "tags": [
+      "book club",
+      "intellectual"
+    ],
+    "bio": "Connected through a mutual book club. We often debate ideas over coffee.",
+    "goal": 14,
+    "next_due_date": "2025-07-30"
+  },
+  {
+    "id": 9,
+    "name": "lora",
+    "picture": "https://ibb.co.com/Mk1v6HRc",
+    "email": "lora23@outlook.com",
+    "days_since_contact": 60,
+    "status": "overdue",
+    "tags": [
+      "travel",
+      "adventure friend"
+    ],
+    "bio": "Met on a backpacking trip to Sylhet. We have traveled to five places since then.",
+    "goal": 30,
+    "next_due_date": "2025-07-10"
+  },
+  {
+    "id": 10,
+    "name": "Sultan",
+    "picture": "https://ibb.co.com/RpCmZwt1",
+    "email": "sultan@yahoo.com",
+    "days_since_contact": 10,
+    "status": "almost due",
+    "tags": [
+      "colleague",
+      "team lead"
+    ],
+    "bio": "She leads our product team at work. Very inspiring and organized person.",
+    "goal": 10,
+    "next_due_date": "2025-08-08"
+  },
+  {
+    "id": 11,
+    "name": "Shahriar Noor",
+    "picture": "https://ibb.co.com/BVFvfHbH",
+    "email": "shahriar.noor@gmail.com",
+    "days_since_contact": 25,
+    "status": "almost due",
+    "tags": [
+      "photography",
+      "creative circle"
+    ],
+    "bio": "We bonded over street photography and often go out on photo walks in Dhaka.",
+    "goal": 21,
+    "next_due_date": "2025-07-22"
+  },
+  {
+    "id": 12,
+    "name": "Disha Rahman",
+    "picture": "https://ibb.co.com/m5BDk6wp",
+    "email": "disha.rahman@protonmail.com",
+    "days_since_contact": 7,
+    "status": "on-track",
+    "tags": [
+      "music",
+      "band mate"
+    ],
+    "bio": "We play in the same indie band. She plays guitar and I handle the keyboards.",
+    "goal": 7,
+    "next_due_date": "2025-08-20"
+  }
+]

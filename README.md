@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+promt
+create a json file acording this json info stucture and এখানে যেসব name and tags আছে json এর name and tags এসব নামের এবং tag এর সাথে যেন কিছুটা মিল থাকে আর সব name and tags আলাদা আলাদা name and tags হবে আর বাকি property গুলো নিজের মতো করে দিবে এখানে মোট ১৫ তা item বানাবে 
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+json structure 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+"{
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+  "id": 1,
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+  "name": "John Doe",
 
-## Learn More
+  "picture": "https://example.com/photo.jpg",
 
-To learn more about Next.js, take a look at the following resources:
+  "email": "john@example.com",
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  "days_since_contact": 12,
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+  "status": "overdue",
 
-## Deploy on Vercel
+  "tags": ["college", "close friend"],
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  "bio": "Met in university. Love hiking together.",
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  "goal": 14,
+
+  "next_due_date": "2025-07-20"
+
+}"
+
+সব item এ এই সব property থাকবে 
+
+
+
+picture file path
+
