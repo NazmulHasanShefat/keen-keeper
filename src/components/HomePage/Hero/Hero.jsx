@@ -10,20 +10,20 @@ const Hero = () => {
            </div>
 
            <div className='scoresection grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-10 mt-10'>
-            <div className='score_card py-5 px-15 shadow-lg flex flex-col items-center'>
+            <div className='score_card py-5 px-15 shadow-lg flex flex-col items-center hover:translate-1.5 transition-[translate] duration-200'>
                 <div className='text-5xl font-bold'>10</div>
                 <div className='text-gray-400'>total friend</div>
             </div>
-            <div className='score_card py-5 px-15 shadow-lg flex flex-col items-center'>
+            <div className='score_card py-5 px-15 shadow-lg flex flex-col items-center hover:translate-y-1.5 transition-[translate] duration-200'>
                 <div className='text-5xl font-bold'>10</div>
                 <div className='text-gray-400'>On Track</div>
             </div>
-            <div className='score_card py-5 px-15 shadow-lg flex flex-col items-center'>
+            <div className='score_card py-5 px-15 shadow-lg flex flex-col items-center hover:translate-y-1.5 transition-[translate] duration-200'>
                 <div className='text-5xl font-bold'>10</div>
                 <div className='text-gray-400'>Need Attention</div>
             </div>
 
-            <div className='score_card py-5 px-15 shadow-lg flex flex-col items-center'>
+            <div className='score_card py-5 px-15 shadow-lg flex flex-col items-center hover:translate-y-1.5 transition-[translate] duration-200'>
                 <div className='text-5xl font-bold'>10</div>
                 <div className='text-gray-400'>Interactions This Month</div>
             </div>

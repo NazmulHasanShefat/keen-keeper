@@ -1,9 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const FriendCard = ({ friend }) => {
-  console.log(friend);
   return (
-    <div className="shadow-md mt-10 p-3 cursor-pointer hover:translate-y-1.5 transition-[translate] duration-200 friends_card flex flex-col items-center">
+    <Link href={`/details/${friend.id}`} className="shadow-md mt-10 p-3 cursor-pointer hover:translate-y-1.5 transition-[translate] duration-200 friends_card flex flex-col items-center">
       <Image
         src={friend.picture}
         height={70}
@@ -22,10 +22,10 @@ const FriendCard = ({ friend }) => {
         );
       })}
       </div>
-      <div className="py-1 my-1 rounded-full px-4 text-xs bg-yellow-500 text-white">
-        almost Due
+      <div className={`py-1 my-1 rounded-full px-4 text-xs text-white ${friend.status === "on-track" ? "bg-green-600": friend.status === "almost due" ? "bg-yellow-500": friend.status === "overdue" ? "bg-red-500" : ""}`}>
+        {friend.status}
       </div>
-    </div>
+    </Link>
   );
 };
 
