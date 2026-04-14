@@ -8,10 +8,10 @@ const timelinePage = () => {
       <div className="flex justify-between items-center mt-5">
         <h1 className="text-[48px] font-bold">Timeline</h1>
         <select defaultValue="Pick a color" className="select">
-          <option disabled={true}>Pick a color</option>
-          <option>Crimson</option>
-          <option>Amber</option>
-          <option>Velvet</option>
+          <option disabled={true}>short by</option>
+          <option>Call</option>
+          <option>Video</option>
+          <option>Message</option>
         </select>
       </div>
 

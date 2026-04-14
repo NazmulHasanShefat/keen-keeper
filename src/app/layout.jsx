@@ -2,6 +2,7 @@ import "./globals.css";
 import Navigation from "@/components/Header/Navigation";
 import Providers from "./lib";
  import { ToastContainer } from 'react-toastify';
+import Footer from "@/components/Footer/Footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         <Navigation />
          <ToastContainer />
         {children}
+        <Footer />
         </Providers>
       </body>
     </html>

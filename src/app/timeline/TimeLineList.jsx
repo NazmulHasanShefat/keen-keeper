@@ -1,6 +1,7 @@
 "use client";
 import { FriendsContext } from "@/context/allContext";
 import { MessageSquareMore, PhoneCall, Video } from "lucide-react";
+import Link from "next/link";
 import { useContext } from "react";
 
 const TimeLineList = () => {
@@ -10,13 +11,13 @@ const TimeLineList = () => {
     <>
       <div className="flex flex-col items-center">
         <h1 className="text-7xl font-bold">404 Not found</h1>
-        <p className="text-[18px] text-gray-500 my-2">somethig want wrong please contact our support</p>
-        <button
-          type="button"
+        <p className="text-[18px] text-gray-500 my-2">Please add some timeline</p>
+        <Link
+          href={"/"}
           className="py-2 rounded-xl hover:scale-105 transition-[scale] duration-200 cursor-pointer px-4 bg-green-700 text-white text-base"
         >
-          Contact
-        </button>
+          Go to Home page
+        </Link>
       </div>
     </>
   ) : (
