@@ -3,6 +3,7 @@ import React, { use } from 'react';
 import iconBell from "../../../assets/icons/BellSimpleZ.png";
 import archiveIcon from "../../../assets/Archive.png";
 import trashIcon from "../../../assets/Trash.png";
+import { redirect } from 'next/navigation';
 
 const FriendDetailsLeft = ({ friendDetailPromise, slug }) => {
     const friendDetail = use(friendDetailPromise);
@@ -26,7 +27,7 @@ const FriendDetailsLeft = ({ friendDetailPromise, slug }) => {
             </div>
         );
     }else{
-        return;
+        return redirect("/notfound");
     }
 };
 
