@@ -6,7 +6,7 @@ import { PiInstagramLogoFill } from "react-icons/pi";
 
 const Footer = () => {
   return (
-    <footer className="footer mt-30 footer-horizontal footer-center bg-green-900 text-white text-base-content rounded p-10">
+    <footer className="footer mt-30 footer-horizontal footer-center bg-green-900 text-white rounded p-10">
       <nav className="flex justify-center items-center">
         <h1 className="lg:text-[60px] md:text-[60px] text-[40px] font-bold ">Keenkeeper</h1>
       </nav>
