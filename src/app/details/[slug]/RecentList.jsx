@@ -19,9 +19,9 @@ const RecentList = () => {
       return (
         <li
           key={index}
-          className="list-row grid grid-cols-12 border border-gray-200 my-2"
+          className="list-row grid grid-cols-12 border border-gray-200 my-2 px-0"
         >
-          <div className="flex items-center gap-3 col-span-10">
+          <div className="flex items-center gap-3 lg:col-span-10 md:col-span-10 col-span-8">
             {list.communicationType === "Call" ? (
               <PhoneCall size={30} />
             ) : list.communicationType === "Message" ? (
@@ -31,7 +31,7 @@ const RecentList = () => {
             )}
 
             <div>
-              <div className="text-base text-gray-400">
+              <div className="lg:text-base md:text-base text-xs text-gray-400">
                 <span className="font-bold text-gray-700">
                   {" "}
                   {list.communicationType}{" "}
@@ -44,7 +44,7 @@ const RecentList = () => {
             </div>
           </div>
 
-          <div className="flex justify-end items-center col-span-2">
+          <div className="flex justify-end items-center lg:col-span-2 md:col-span-2 col-span-4 text-xs lg:text-base md:text-base">
             <p className="text-gray-400"> {list.communicationTime} </p>
           </div>
         </li>

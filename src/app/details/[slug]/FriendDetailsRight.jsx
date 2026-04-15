@@ -81,7 +81,7 @@ const FriendDetailsRight = ({ friendDetailPromise, slug }) => {
           </p>
         </div>
   
-        <ul className="list bg-base-100 rounded-box shadow-md mt-5 pb-5 px-5">
+        <ul className="list bg-base-100 rounded-box shadow-md mt-5 pb-5 lg:px-5 md:px-5">
           <RecentList />
         </ul>
       </div>
