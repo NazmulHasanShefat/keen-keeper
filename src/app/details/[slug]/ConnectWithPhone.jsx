@@ -9,15 +9,23 @@ const ConnectWithPhone = ({ CurrentFriend }) => {
     useContext(FriendsContext);
   const handleUpdateConnectionStatus = () => {
     // CurrentFriend,
-    const current_date = `${new Date().getFullYear()}-${new Date().getMonth() + 1}-${new Date().getDate()}`;
-    const communicationTime = `${new Date().getHours() % 12 || 12}h ${new Date().getMinutes()}m ${new Date().getSeconds()}s`;
+const currentNewTime = new Date();
+    const hour = currentNewTime.getHours();
+    const min = currentNewTime.getMinutes();
+    const sec = currentNewTime.getSeconds();
+    const year = currentNewTime.getFullYear();
+    const month = currentNewTime.getMonth();
+    const date = currentNewTime.getDate();
+
+    const communicationTime = `${hour < 10 ? "0"+ hour % 12 || 12 : hour % 12 || 12 }:${min < 10 ? "0"+min : min}:${sec < 10 ? "0" + sec : sec }`;
+    const current_date = `${year}-${month < 10 ? "0" + (month + 1): month + 1 }-${date < 10 ? "0" + date : date} ${communicationTime}`; 
+    
     const newStatus = [
       ...friendsConnectionStatus,
       {
         communication_date: current_date,
         communicationType: "Call",
         personName: CurrentFriend.name,
-        communicationTime,
       },
     ];
     setFriendsConnectionStatus(newStatus);

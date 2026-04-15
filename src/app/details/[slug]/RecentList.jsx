@@ -3,6 +3,7 @@ import { FriendsContext } from "@/context/allContext";
 import { MessageSquareMore, PhoneCall, Video } from "lucide-react";
 import Link from "next/link";
 import React, { useContext } from "react";
+import { CiMenuKebab } from "react-icons/ci";
 
 const RecentList = () => {
   const { friendsConnectionStatus } = useContext(FriendsContext);
@@ -19,7 +20,7 @@ const RecentList = () => {
       return (
         <li
           key={index}
-          className="list-row grid grid-cols-12 border border-gray-200 my-2 px-0"
+          className="list-row grid grid-cols-12 border border-gray-200 my-2 px-0 lg:px-5 md:px-5"
         >
           <div className="flex items-center gap-3 lg:col-span-10 md:col-span-10 col-span-8">
             {list.communicationType === "Call" ? (
@@ -45,7 +46,7 @@ const RecentList = () => {
           </div>
 
           <div className="flex justify-end items-center lg:col-span-2 md:col-span-2 col-span-4 text-xs lg:text-base md:text-base">
-            <p className="text-gray-400"> {list.communicationTime} </p>
+            <p className="text-gray-400 cursor-pointer"> <CiMenuKebab /> </p>
           </div>
         </li>
       );

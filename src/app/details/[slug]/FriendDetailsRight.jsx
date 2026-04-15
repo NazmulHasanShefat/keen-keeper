@@ -19,7 +19,7 @@ const FriendDetailsRight = ({ friendDetailPromise, slug }) => {
   );
   if(CurrentFriend){
     return (
-      <div className="px-10">
+      <div className="px-5">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-10">
           <div className="card card-border shadow-md hover:translate-y-1.5 transition-[translate] duration-200">
             <div className="card-body flex flex-col items-center">

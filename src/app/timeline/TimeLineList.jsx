@@ -3,6 +3,7 @@ import { FriendsContext } from "@/context/allContext";
 import { MessageSquareMore, PhoneCall, Video } from "lucide-react";
 import Link from "next/link";
 import { useContext } from "react";
+import { CiMenuKebab } from "react-icons/ci";
 
 const TimeLineList = ({ selectedValue }) => {
   const { friendsConnectionStatus } = useContext(FriendsContext);
@@ -65,13 +66,13 @@ const TimeLineList = ({ selectedValue }) => {
                 <span> { connectionTimeline.personName} </span>
               </div>
               <div className="text-xs uppercase font-normal text-gray-400">
-                { connectionTimeline.communication_date}
+                { connectionTimeline.communication_date }
               </div>
             </div>
           </div>
 
           <div className="flex justify-end items-center col-span-4 lg:col-span-2 md:col-span-2">
-            <p className="text-gray-400"> {connectionTimeline.communicationTime} </p>
+            <p className="text-gray-400 cursor-pointer"> <CiMenuKebab /> </p>
           </div>
         </li>
       );
