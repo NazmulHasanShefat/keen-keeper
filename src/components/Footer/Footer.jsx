@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -25,22 +26,20 @@ const Footer = () => {
     
         </div>
       </nav>
-    <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content items-center justify-between p-4">
-  <aside className="grid-flow-col items-center">
-    <p>© {new Date().getFullYear()} KeenKeeper. All rights reserved.</p>
-  </aside>
-  <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-    <a className="cursor-pointer hover:underline">
-     Privacy Policy
-    </a>
-    <a className="cursor-pointer hover:underline">
-     Terms of Service
-    </a>
-    <a className="cursor-pointer hover:underline">
-     Cookies
-    </a>
-  </nav>
-</footer>
+      <div className="block lg:flex md:flex justify-between w-full items-center">
+        <p className="text-base">© {new Date().getFullYear()} KeenKeeper. All rights reserved.</p>
+        <div className="links flex flex-col md:flex-row lg:flex-row mt-5 md:mt-0 lg:mt-0 justify-center items-center gap-4">
+          <div>
+          <Link href={"/"} className="cursor-pointer hover:underline text-base">Privacy Policy  </Link>
+          </div>
+          <div>
+          <Link href={"/"} className="cursor-pointer hover:underline text-base">Terms of Service </Link>
+          </div>
+          <div>
+          <Link href={"/"} className="cursor-pointer hover:underline text-base"> Cookies</Link>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };

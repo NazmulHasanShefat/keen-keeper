@@ -6,7 +6,6 @@ import React, { useContext } from "react";
 
 const RecentList = () => {
   const { friendsConnectionStatus } = useContext(FriendsContext);
-  console.log(friendsConnectionStatus, "this is the");
   return !friendsConnectionStatus || friendsConnectionStatus.length === 0 ? (
     <>
       <div className="flex flex-col items-center">

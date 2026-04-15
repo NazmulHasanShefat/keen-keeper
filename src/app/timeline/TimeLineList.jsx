@@ -4,9 +4,22 @@ import { MessageSquareMore, PhoneCall, Video } from "lucide-react";
 import Link from "next/link";
 import { useContext } from "react";
 
-const TimeLineList = () => {
+const TimeLineList = ({ selectedValue }) => {
   const { friendsConnectionStatus } = useContext(FriendsContext);
-  return friendsConnectionStatus.length === 0 || !friendsConnectionStatus ? (
+  const filterdList = friendsConnectionStatus.filter((list)=> list.communicationType === selectedValue);
+  
+  const showFilterdData = ()=>{
+    if(selectedValue === "All"){
+      return friendsConnectionStatus
+    }else{
+      return filterdList
+    }
+  }
+  const ConnectionList = showFilterdData();
+  console.log(ConnectionList)
+
+
+  return ConnectionList.length === 0 || !ConnectionList ? (
     <>
       <div className="flex flex-col items-center">
         <h1 className="text-7xl font-bold text-center">404 Not found</h1>
@@ -20,7 +33,7 @@ const TimeLineList = () => {
       </div>
     </>
   ) : (
-    friendsConnectionStatus.map((connectionTimeline, index) => {
+    ConnectionList.map((connectionTimeline, index) => {
       return (
         <li
           key={index}
