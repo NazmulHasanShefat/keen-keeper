@@ -87,7 +87,7 @@ const FriendDetailsRight = ({ friendDetailPromise, slug }) => {
       </div>
     );
   }else{
-    return redirect("/notfound");
+   return redirect("/");
   }
 };
 
