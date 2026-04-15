@@ -5,37 +5,55 @@ import Link from "next/link";
 import { useContext } from "react";
 import { CiMenuKebab } from "react-icons/ci";
 
-const TimeLineList = ({ selectedValue }) => {
+const TimeLineList = ({ selectedValue, searchKeyword }) => {
   const { friendsConnectionStatus } = useContext(FriendsContext);
-  const filterdList = friendsConnectionStatus.filter((list)=> list.communicationType === selectedValue);
-  
-  const showFilterdData = ()=>{
-    if(selectedValue === "All"){
-      return friendsConnectionStatus
-    }else if(selectedValue === "Oldest"){
-      friendsConnectionStatus.sort((prev_date, next_date) => {
-        return new Date(prev_date.communication_date) - new Date(next_date.communication_date); 
-       })
-       return friendsConnectionStatus; 
-    }else if(selectedValue === "latest"){
-      friendsConnectionStatus.sort((prev_date, next_date) => {
-        return new Date(next_date.communication_date) - new Date(prev_date.communication_date); 
-       })
-       return friendsConnectionStatus; 
-    }
+  const filterdList = friendsConnectionStatus.filter(
+    (list) => list.communicationType === selectedValue,
+  );
+  const searchResult = friendsConnectionStatus.filter(
+    (list)=> list.personName.toLowerCase().includes(searchKeyword.toLowerCase()) || list.communicationType.toLowerCase().includes(searchKeyword.toLowerCase()) 
+  );
 
-    else{
+
+  const showFilterdData = () => {
+    if(searchKeyword.length > 0){
+      return searchResult;
+    }
+    if (selectedValue === "All") {
+      return friendsConnectionStatus;
+    } else if (selectedValue === "Oldest") {
+      friendsConnectionStatus.sort((prev_date, next_date) => {
+        return (
+          new Date(prev_date.communication_date) -
+          new Date(next_date.communication_date)
+        );
+      });
+      return friendsConnectionStatus;
+    } else if (selectedValue === "latest") {
+      friendsConnectionStatus.sort((prev_date, next_date) => {
+        return (
+          new Date(next_date.communication_date) -
+          new Date(prev_date.communication_date)
+        );
+      });
+      return friendsConnectionStatus;
+    } else {
+      // console.log(filterdList);
       return filterdList;
     }
-  }
-  const ConnectionList = showFilterdData();
+  };
 
+  const ConnectionList = showFilterdData();
 
   return ConnectionList.length === 0 || !ConnectionList ? (
     <>
       <div className="flex flex-col items-center">
-        <h1 className="text-[30px] md:text-[48px] lg:text-[48px] font-bold text-center">404 Not found</h1>
-        <p className="text-[18px] text-gray-500 my-2 text-center">Please communicate with your friends</p>
+        <h1 className="text-[30px] md:text-[48px] lg:text-[48px] font-bold text-center">
+          404 Not found
+        </h1>
+        <p className="text-[18px] text-gray-500 my-2 text-center">
+          Please communicate with your friends
+        </p>
         <Link
           href={"/"}
           className="py-2 rounded-xl hover:scale-105 transition-[scale] duration-200 cursor-pointer px-4 bg-green-700 text-white text-base"
@@ -52,27 +70,33 @@ const TimeLineList = ({ selectedValue }) => {
           className="list-row grid grid-cols-12 border border-gray-200 my-2"
         >
           <div className="flex items-center gap-3 col-span-8 lg:col-span-10 md:col-span-10">
-            {connectionTimeline.communicationType === "Call" ?
-            <PhoneCall size={30}/>:
-            connectionTimeline.communicationType === "Message" ?
-            <MessageSquareMore size={30} />
-            : 
-            <Video size={30} />
-             }
-          
+            {connectionTimeline.communicationType === "Call" ? (
+              <PhoneCall size={30} />
+            ) : connectionTimeline.communicationType === "Message" ? (
+              <MessageSquareMore size={30} />
+            ) : (
+              <Video size={30} />
+            )}
+
             <div>
               <div className="text-base text-gray-400">
-                <span className="font-bold text-gray-700"> {connectionTimeline.communicationType} </span> with{" "}
-                <span> { connectionTimeline.personName} </span>
+                <span className="font-bold text-gray-700">
+                  {" "}
+                  {connectionTimeline.communicationType}{" "}
+                </span>{" "}
+                with <span> {connectionTimeline.personName} </span>
               </div>
               <div className="text-xs uppercase font-normal text-gray-400">
-                { connectionTimeline.communication_date }
+                {connectionTimeline.communication_date}
               </div>
             </div>
           </div>
 
           <div className="flex justify-end items-center col-span-4 lg:col-span-2 md:col-span-2">
-            <p className="text-gray-400 cursor-pointer"> <CiMenuKebab /> </p>
+            <p className="text-gray-400 cursor-pointer">
+              {" "}
+              <CiMenuKebab />{" "}
+            </p>
           </div>
         </li>
       );
