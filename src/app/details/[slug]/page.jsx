@@ -6,9 +6,9 @@ const fetchCurrentfriend = async () => {
   try {
     const res = await fetch(
       `https://keen-keeper-pi.vercel.app/friends-data.json`,
-      { cache: "no-store" },
+       { next: { revalidate: 60 }}
     );
-    const resData = res.json();
+    const resData = await res.json();
     return resData;
 
   } catch (error) {
@@ -17,7 +17,7 @@ const fetchCurrentfriend = async () => {
 };
 
 const FriendDetails = async ({ params }) => {
-  
+
   const { slug } = await params;
   const friendDetailPromise = fetchCurrentfriend();
 
