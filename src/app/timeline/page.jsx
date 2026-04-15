@@ -1,17 +1,17 @@
-import { MessageSquareMore } from "lucide-react";
 import React from "react";
 import TimeLineList from "./TimeLineList";
 
 const timelinePage = () => {
   return (
-    <section title="timeline" className="w-full max-w-[1280.1px] mx-auto">
-      <div className="flex justify-between items-center mt-5">
+    <section title="timeline" className="w-full max-w-[1280.1px] mx-auto px-5">
+      <div className="lg:flex md:flex block justify-between items-center mt-5">
         <h1 className="text-[48px] font-bold">Timeline</h1>
         <select defaultValue="Pick a color" className="select">
           <option disabled={true}>short by</option>
           <option>Call</option>
           <option>Video</option>
           <option>Message</option>
+          <option>All</option>
         </select>
       </div>
 

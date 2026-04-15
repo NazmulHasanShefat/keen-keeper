@@ -10,7 +10,7 @@ const RecentList = () => {
   return !friendsConnectionStatus || friendsConnectionStatus.length === 0 ? (
     <>
       <div className="flex flex-col items-center">
-        <h1 className="text-4xl font-bold my-2">No recent activity exist</h1>
+        <h1 className="text-4xl font-bold my-2 text-center">No recent activity exist</h1>
       </div>
     </>
   ) : (

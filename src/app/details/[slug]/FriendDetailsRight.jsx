@@ -17,7 +17,7 @@ const FriendDetailsRight = ({ friendDetailPromise, slug }) => {
     (friend) => friend.id === Number(slug),
   );
   return (
-    <>
+    <div className="px-10">
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-10">
         <div className="card card-border shadow-md hover:translate-y-1.5 transition-[translate] duration-200">
           <div className="card-body flex flex-col items-center">
@@ -69,11 +69,11 @@ const FriendDetailsRight = ({ friendDetailPromise, slug }) => {
         <ConnectWithVideo CurrentFriend={CurrentFriend} />
       </div>
 
-      <div className="flex justify-between items-center mt-10">
+      <div className="flex justify-between items-center mt-10 text-sm md:text-base lg:text-base">
         <p>Recent Interactions</p>
-        <p className="flex justify-center items-center gap-2">
+        <p className="flex justify-center items-center gap-2 text-sm md:text-base lg:text-base">
           <span>
-            <History />
+            <History size={20}/>
           </span>{" "}
           Full History
         </p>
@@ -82,7 +82,7 @@ const FriendDetailsRight = ({ friendDetailPromise, slug }) => {
       <ul className="list bg-base-100 rounded-box shadow-md mt-5 pb-5 px-5">
         <RecentList />
       </ul>
-    </>
+    </div>
   );
 };
 
