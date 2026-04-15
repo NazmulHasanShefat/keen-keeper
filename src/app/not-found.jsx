@@ -1,5 +1,8 @@
 import Link from "next/link";
-
+export const metadata = {
+  title: "Keen keeper - 404 Not found",
+  description: "Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.",
+};
 export default function NotFound() {
   return (
     <div className="h-screen flex-col w-full flex justify-center items-center">
