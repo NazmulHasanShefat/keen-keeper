@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         <Providers>
         <Navigation />
-         <ToastContainer />
+         <ToastContainer position="top-center"/>
         {children}
         <Footer />
         </Providers>

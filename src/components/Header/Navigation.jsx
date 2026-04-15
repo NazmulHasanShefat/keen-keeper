@@ -1,6 +1,7 @@
 import { ChartLine, Clock, House } from "lucide-react";
 import MyLink from "./MyLink";
-import { MdMenuOpen } from "react-icons/md";
+import MenuTogglerIcon from "./MenuTogglerIcon";
+import MobileMenus from "./MobileMenus";
 
 const Navigation = () => {
   return (
@@ -15,8 +16,9 @@ const Navigation = () => {
       </div>
 
       <div className="lg:hidden md:hidden justify-end items-center">
-        <MdMenuOpen size={30}/>
+        <MenuTogglerIcon />
       </div>
+      <MobileMenus />
     </nav>
   );
 };
