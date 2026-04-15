@@ -2,21 +2,25 @@
 import { FriendsContext } from "@/context/allContext";
 import { MessageSquareMore, PhoneCall, Video } from "lucide-react";
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CiMenuKebab } from "react-icons/ci";
 
 const TimeLineList = ({ selectedValue, searchKeyword }) => {
   const { friendsConnectionStatus } = useContext(FriendsContext);
+
   const filterdList = friendsConnectionStatus.filter(
     (list) => list.communicationType === selectedValue,
   );
   const searchResult = friendsConnectionStatus.filter(
-    (list)=> list.personName.toLowerCase().includes(searchKeyword.toLowerCase()) || list.communicationType.toLowerCase().includes(searchKeyword.toLowerCase()) 
+    (list) =>
+      list.personName.toLowerCase().includes(searchKeyword.toLowerCase()) ||
+      list.communicationType
+        .toLowerCase()
+        .includes(searchKeyword.toLowerCase()),
   );
 
-
   const showFilterdData = () => {
-    if(searchKeyword.length > 0){
+    if (searchKeyword.length > 0) {
       return searchResult;
     }
     if (selectedValue === "All") {
