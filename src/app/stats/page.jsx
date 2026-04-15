@@ -1,6 +1,11 @@
 import React from 'react';
 import ChartComponents from './ChartComponents';
 
+export const metadata = {
+  title: "keen keeper - Stats",
+  description: "Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.",
+};
+
 const stats = () => {
   return (
     <section className='px-5'>
