@@ -7,12 +7,19 @@ import { useContext } from "react";
 const TimeLineList = ({ selectedValue }) => {
   const { friendsConnectionStatus } = useContext(FriendsContext);
   const filterdList = friendsConnectionStatus.filter((list)=> list.communicationType === selectedValue);
-  
+  // const Oldest = friendsConnectionStatus.filter((list)=>list.id)
   const showFilterdData = ()=>{
     if(selectedValue === "All"){
       return friendsConnectionStatus
+    }else if(selectedValue === "Oldest"){
+       const newval = friendsConnectionStatus.filter((list)=>{
+        list.communicationTime > list.communicationTime;
+       })
+       console.log(newval);;
+       return filterdList;
+       
     }else{
-      return filterdList
+      return filterdList;
     }
   }
   const ConnectionList = showFilterdData();
