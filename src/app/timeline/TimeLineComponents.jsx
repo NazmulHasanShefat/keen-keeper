@@ -23,6 +23,7 @@ const TimeLineComponents = () => {
           <option>Video</option>
           <option>Message</option>
           <option>Oldest</option>
+          <option>latest</option>
         </select>
       </div>
 

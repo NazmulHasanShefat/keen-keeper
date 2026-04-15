@@ -7,23 +7,27 @@ import { useContext } from "react";
 const TimeLineList = ({ selectedValue }) => {
   const { friendsConnectionStatus } = useContext(FriendsContext);
   const filterdList = friendsConnectionStatus.filter((list)=> list.communicationType === selectedValue);
-  // const Oldest = friendsConnectionStatus.filter((list)=>list.id)
+  
   const showFilterdData = ()=>{
     if(selectedValue === "All"){
       return friendsConnectionStatus
     }else if(selectedValue === "Oldest"){
-       const newval = friendsConnectionStatus.filter((list)=>{
-        list.communicationTime > list.communicationTime;
+      friendsConnectionStatus.sort((prev_date, next_date) => {
+        return new Date(prev_date.communication_date) - new Date(next_date.communication_date); 
        })
-       console.log(newval);;
-       return filterdList;
-       
-    }else{
+       return friendsConnectionStatus; 
+    }else if(selectedValue === "latest"){
+      friendsConnectionStatus.sort((prev_date, next_date) => {
+        return new Date(next_date.communication_date) - new Date(prev_date.communication_date); 
+       })
+       return friendsConnectionStatus; 
+    }
+
+    else{
       return filterdList;
     }
   }
   const ConnectionList = showFilterdData();
-  console.log(ConnectionList)
 
 
   return ConnectionList.length === 0 || !ConnectionList ? (

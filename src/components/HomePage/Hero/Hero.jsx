@@ -13,13 +13,6 @@ const fetchFriendsData = async () => {
 
 const Hero = async () => {
   const friends_data = await fetchFriendsData();
-//   Need Attention
-//   Interactions This Month
-//   const On Track
-// overdue
-// neighbor
-// old frie
-console.log(friends_data)
 const onTrackFriends = friends_data.filter((friend)=> friend.status === "on-track");
 const need_attention = friends_data.filter((friend)=> friend.status === "overdue");
   return (
