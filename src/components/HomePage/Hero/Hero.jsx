@@ -2,7 +2,9 @@ const fetchFriendsData = async () => {
   try {
     const res = await fetch(
       `https://keen-keeper-pi.vercel.app/friends-data.json`,
-      { cache: "no-store" },
+      {
+        cache: "no-store",
+      },
     );
     const resData = res.json();
     return resData;
@@ -13,8 +15,13 @@ const fetchFriendsData = async () => {
 
 const Hero = async () => {
   const friends_data = await fetchFriendsData();
-const onTrackFriends = friends_data.filter((friend)=> friend.status === "on-track");
-const need_attention = friends_data.filter((friend)=> friend.status === "overdue");
+  const friend_data_copy = [...friends_data];
+  const onTrackFriends = friend_data_copy?.filter(
+    (friend) => friend.status === "on-track",
+  ) || [];
+  const need_attention = friend_data_copy?.filter(
+    (friend) => friend.status === "overdue",
+  ) || [];
   return (
     <section className="hero block my-20 px-5">
       <h1 className="text-5xl font-bold text-center mt-15 ">

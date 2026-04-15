@@ -1,4 +1,5 @@
 import TimeLineComponents from "./TimeLineComponents";
+export const dynamic = "force-dynamic";
 export const metadata = {
   title: "keen keeper - Timeline",
   description: "Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.",

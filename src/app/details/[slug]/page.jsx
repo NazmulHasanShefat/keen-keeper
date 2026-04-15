@@ -1,7 +1,6 @@
 import React from "react";
 import FriendDetailsLeft from "./FriendDetailsLeft";
 import FriendDetailsRight from "./FriendDetailsRight";
-import Link from "next/link";
 
 const fetchCurrentfriend = async () => {
   try {
@@ -11,12 +10,14 @@ const fetchCurrentfriend = async () => {
     );
     const resData = res.json();
     return resData;
+
   } catch (error) {
     console.log("faild to fetch current friend Error:", error);
   }
 };
 
 const FriendDetails = async ({ params }) => {
+  
   const { slug } = await params;
   const friendDetailPromise = fetchCurrentfriend();
 
