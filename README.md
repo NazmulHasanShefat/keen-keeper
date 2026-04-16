@@ -3,6 +3,7 @@
 
 # Technology Stack 
 - Next js + react + javaScript
+- tailwindcss
 - Lucide react & React iocns library
 - Rechat library
 
